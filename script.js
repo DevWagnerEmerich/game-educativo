@@ -197,7 +197,7 @@ class RodaARodaGame {
       this.playSound(this.passSound);
       this.currentPlayer = (this.currentPlayer % 3) + 1;
       this.setActivePlayer(this.currentPlayer);
-      this.gameState = "choosingLetter";
+      this.gameState = "spinningWheel";
       this.updateStatusIndicator();
       this.spinButton.disabled = false;
       this.updateRevealButton();
@@ -759,25 +759,7 @@ class RodaARodaGame {
 
     loadGame() {
       try {
-        //const saved = localStorage.getItem('rodaARoda');
-        //if (saved) {
-        //  const data = JSON.parse(saved);
-        //  this.usedWords = data.usedWords || [];
-        //  this.scores = data.scores || [0, 0, 0];
-        //  if (data.gameTitle) {
-        //    this.gameTitle = data.gameTitle;
-        //    this.tituloRoleta.textContent = this.gameTitle;
-        //    this.gameTitleInput.value = this.gameTitle;
-        //  }
-        //  if (data.customLogo) {
-        //    this.customLogo = data.customLogo;
-        //    this.logoSpace.style.backgroundImage = `url(${this.customLogo})`;
-        //    this.logoSpace.style.backgroundSize = 'contain';
-        //    this.logoSpace.style.backgroundPosition = 'center';
-        //    this.logoSpace.style.backgroundRepeat = 'no-repeat';
-        //    this.spinButton.style.display = 'none';
-        //  }
-        //}
+
       } catch (error) {
         console.error("Erro ao carregar o jogo:", error);
       }
@@ -785,12 +767,7 @@ class RodaARodaGame {
   
     saveGame() {
       try {
-        //localStorage.setItem('rodaARoda', JSON.stringify({
-        //  scores: this.scores,
-        //  usedWords: this.usedWords,
-        //  gameTitle: this.gameTitle,
-        //  customLogo: this.customLogo
-        //}));
+      
       } catch (error) {
         console.error("Erro ao salvar o jogo:", error);
       }
